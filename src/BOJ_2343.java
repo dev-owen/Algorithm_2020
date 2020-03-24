@@ -18,8 +18,8 @@ public class BOJ_2343 {
 			sum += lessons[i];
 			lessonsSum[i] = sum;
 		}
-		// sum/M 이상 sum 이하 숫자 중에서 블루레이의 최솟값을 찾아야 한다.
-		long low = sum/M;
+		// 1 이상 sum 이하 숫자 중에서 블루레이의 최솟값을 찾아야 한다.
+		long low = 1;
 		long high = sum;
 		long mid = (high+low)/2;
 		long ans = 0;
@@ -27,10 +27,13 @@ public class BOJ_2343 {
 			// 블루레이의 크기가 mid일 때 M개의 블루레이에 모든 레슨을 담을 수 있는지 확인
 			int cnt = 0;
 			int lastIdx = 0;
-			for(int i = 1; i <= N; i++) {
-				if(lessonsSum[i]-lessonsSum[lastIdx] > mid) {
+			int idx = 0;
+			while(idx < N) {
+				idx++;
+				if(lessonsSum[idx]-lessonsSum[lastIdx] > mid) {
 					cnt++;
-					lastIdx = i-1;
+					idx--;
+					lastIdx = idx;
 					if(cnt == M) { // 블루레이 하나의 용량이 너무 작다는 의미. 하나의 용량을 늘려야 한다.
 						low = mid+1;
 						mid = (high+low)/2;
