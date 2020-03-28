@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7073424d-3cda-435a-8350-c81693fb9756" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BOJ_1495.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BOJ_1629.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BOJ_1495.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -38,6 +37,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/BOJ_1629.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -66,6 +74,7 @@
         <option value="$PROJECT_DIR$/src/BOJ_1701.java" />
         <option value="$PROJECT_DIR$/src/BOJ_1495.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/BOJ_1629.java" />
       </list>
     </option>
   </component>
@@ -129,7 +138,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BOJ_1495">
+  <component name="RunManager" selected="Application.BOJ_1629">
     <configuration name="BOJ_1495" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BOJ_1495" />
       <module name="Algorithm_2020" />
@@ -137,15 +146,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BOJ_1701" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BOJ_1701" />
+    <configuration name="BOJ_1629" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BOJ_1629" />
       <module name="Algorithm_2020" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BOJ_2343" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BOJ_2343" />
+    <configuration name="BOJ_1701" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BOJ_1701" />
       <module name="Algorithm_2020" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BOJ_1629" />
         <item itemvalue="Application.BOJ_1495" />
         <item itemvalue="Application.BOJ_1701" />
         <item itemvalue="Application.BOJ_6549" />
         <item itemvalue="Application.BOJ_6459" />
-        <item itemvalue="Application.BOJ_2343" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +196,7 @@
       <updated>1584139557619</updated>
       <workItem from="1584139560101" duration="5905000" />
       <workItem from="1585052280902" duration="6568000" />
-      <workItem from="1585234074075" duration="3332000" />
+      <workItem from="1585234074075" duration="5028000" />
     </task>
     <task id="LOCAL-00001" summary="백준_9019(DSLR) 성공 &#10;메모리 369884KB, 시간 2492ms">
       <created>1584194870288</created>
@@ -231,11 +240,18 @@
       <option name="project" value="LOCAL" />
       <updated>1585236164854</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="백준_1495(기타리스트) 성공&#10;DP">
+      <created>1585306059757</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585306059757</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20596000" />
+    <option name="totallyTimeSpent" value="22292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -321,7 +337,8 @@
     <MESSAGE value="백준_2343(기타 레슨) 성공&#10;이분 탐색" />
     <MESSAGE value="백준_6549(히스토그램에서 가장 큰 직사각형) 실패&#10;시간 초과" />
     <MESSAGE value="백준_1701(Cubeditor) 성공&#10;문자열 알고리즘, KMP" />
-    <option name="LAST_COMMIT_MESSAGE" value="백준_1701(Cubeditor) 성공&#10;문자열 알고리즘, KMP" />
+    <MESSAGE value="백준_1495(기타리스트) 성공&#10;DP" />
+    <option name="LAST_COMMIT_MESSAGE" value="백준_1495(기타리스트) 성공&#10;DP" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/BOJ_9019.java">
@@ -409,6 +426,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BOJ_1629.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
         </state>
       </provider>
     </entry>
