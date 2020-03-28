@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7073424d-3cda-435a-8350-c81693fb9756" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BOJ_1629.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,12 +16,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="480">
-                <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+                <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               </first_editor>
               <second_editor />
             </state>
@@ -41,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BOJ_1629.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -73,8 +72,8 @@
         <option value="$PROJECT_DIR$/src/BOJ_6549.java" />
         <option value="$PROJECT_DIR$/src/BOJ_1701.java" />
         <option value="$PROJECT_DIR$/src/BOJ_1495.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/BOJ_1629.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -196,7 +195,7 @@
       <updated>1584139557619</updated>
       <workItem from="1584139560101" duration="5905000" />
       <workItem from="1585052280902" duration="6568000" />
-      <workItem from="1585234074075" duration="5028000" />
+      <workItem from="1585234074075" duration="5164000" />
     </task>
     <task id="LOCAL-00001" summary="백준_9019(DSLR) 성공 &#10;메모리 369884KB, 시간 2492ms">
       <created>1584194870288</created>
@@ -247,11 +246,18 @@
       <option name="project" value="LOCAL" />
       <updated>1585306059757</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="백준_1629(곱셈) 성공&#10;수학, 분할정복">
+      <created>1585381345205</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585381345205</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22292000" />
+    <option name="totallyTimeSpent" value="22428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -267,7 +273,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49427754" visible="true" weight="0.28674698" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49427754" weight="0.28674698" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49642345" weight="0.3433735" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -275,7 +281,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49427754" weight="0.22891566" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49785408" weight="0.23855421" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49785408" visible="true" weight="0.23855421" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50214595" side_tool="true" weight="0.23855421" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -338,7 +344,8 @@
     <MESSAGE value="백준_6549(히스토그램에서 가장 큰 직사각형) 실패&#10;시간 초과" />
     <MESSAGE value="백준_1701(Cubeditor) 성공&#10;문자열 알고리즘, KMP" />
     <MESSAGE value="백준_1495(기타리스트) 성공&#10;DP" />
-    <option name="LAST_COMMIT_MESSAGE" value="백준_1495(기타리스트) 성공&#10;DP" />
+    <MESSAGE value="백준_1629(곱셈) 성공&#10;수학, 분할정복" />
+    <option name="LAST_COMMIT_MESSAGE" value="백준_1629(곱셈) 성공&#10;수학, 분할정복" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/BOJ_9019.java">
@@ -409,13 +416,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="480">
-            <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/BOJ_1629.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -429,10 +433,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BOJ_1629.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="480">
+            <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
