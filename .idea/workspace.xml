@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7073424d-3cda-435a-8350-c81693fb9756" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BOJ_1761.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BOJ_14225.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -22,10 +22,22 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="471">
-                <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+              <first_editor relative-caret-position="391">
+                <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BOJ_14225.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,6 +126,7 @@
         <option value="$PROJECT_DIR$/src/BOJ_2166.java" />
         <option value="$PROJECT_DIR$/src/BOJ_11657.java" />
         <option value="$PROJECT_DIR$/src/BOJ_1761.java" />
+        <option value="$PROJECT_DIR$/src/BOJ_14225.java" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -177,7 +190,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BOJ_1761">
+  <component name="RunManager" selected="Application.BOJ_14225">
     <configuration name="BOJ_11657" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BOJ_11657" />
       <module name="Algorithm_2020" />
@@ -185,8 +198,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BOJ_1495" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BOJ_1495" />
+    <configuration name="BOJ_14225" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BOJ_14225" />
       <module name="Algorithm_2020" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -215,11 +228,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BOJ_14225" />
         <item itemvalue="Application.BOJ_1761" />
         <item itemvalue="Application.BOJ_11657" />
         <item itemvalue="Application.BOJ_2166" />
         <item itemvalue="Application.BOJ_1629" />
-        <item itemvalue="Application.BOJ_1495" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +249,7 @@
       <workItem from="1584139560101" duration="5905000" />
       <workItem from="1585052280902" duration="6568000" />
       <workItem from="1585234074075" duration="12410000" />
-      <workItem from="1585624635021" duration="3332000" />
+      <workItem from="1585624635021" duration="4492000" />
     </task>
     <task id="LOCAL-00001" summary="백준_9019(DSLR) 성공 &#10;메모리 369884KB, 시간 2492ms">
       <created>1584194870288</created>
@@ -329,11 +342,18 @@
       <option name="project" value="LOCAL" />
       <updated>1585538503008</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="백준_1761(정점들의 거리) 실패&#10;시간초과">
+      <created>1585709709254</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1585709709254</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33006000" />
+    <option name="totallyTimeSpent" value="34166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -423,7 +443,8 @@
     <MESSAGE value="백준_1629(곱셈) 성공&#10;수학, 분할정복" />
     <MESSAGE value="백준_2166(다각형의 면적) 성공&#10;기하, CCW 알고리즘" />
     <MESSAGE value="백준_11657(타임머신) 실패&#10;negative cycle을 구현 못함" />
-    <option name="LAST_COMMIT_MESSAGE" value="백준_11657(타임머신) 실패&#10;negative cycle을 구현 못함" />
+    <MESSAGE value="백준_1761(정점들의 거리) 실패&#10;시간초과" />
+    <option name="LAST_COMMIT_MESSAGE" value="백준_1761(정점들의 거리) 실패&#10;시간초과" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/BOJ_9019.java">
@@ -541,11 +562,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/BOJ_14225.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="471">
-            <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <first_editor relative-caret-position="391">
+            <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
           </first_editor>
           <second_editor />
         </state>
