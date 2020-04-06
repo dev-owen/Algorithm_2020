@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7073424d-3cda-435a-8350-c81693fb9756" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Line_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Line_4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BOJ_2206.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Line_4.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -42,8 +41,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Line_2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="323">
+              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/BOJ_2206.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,6 +93,7 @@
         <option value="$PROJECT_DIR$/src/BOJ_1933.java" />
         <option value="$PROJECT_DIR$/src/Line_4.java" />
         <option value="$PROJECT_DIR$/src/Line_2.java" />
+        <option value="$PROJECT_DIR$/src/BOJ_2206.java" />
       </list>
     </option>
   </component>
@@ -129,6 +141,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
@@ -144,7 +159,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Line_4">
+  <component name="RunManager" selected="Application.BOJ_2206">
     <configuration name="BOJ_12886" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BOJ_12886" />
       <module name="Algorithm_2020" />
@@ -159,8 +174,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BOJ_2109" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BOJ_2109" />
+    <configuration name="BOJ_2206" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BOJ_2206" />
       <module name="Algorithm_2020" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BOJ_2206" />
         <item itemvalue="Application.Line_4" />
         <item itemvalue="Application.Line_2" />
         <item itemvalue="Application.BOJ_1933" />
         <item itemvalue="Application.BOJ_12886" />
-        <item itemvalue="Application.BOJ_2109" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +219,7 @@
       <workItem from="1585052280902" duration="6568000" />
       <workItem from="1585234074075" duration="12410000" />
       <workItem from="1585624635021" duration="16413000" />
-      <workItem from="1585892528976" duration="2651000" />
+      <workItem from="1585892528976" duration="7509000" />
     </task>
     <task id="LOCAL-00001" summary="백준_9019(DSLR) 성공 &#10;메모리 369884KB, 시간 2492ms">
       <created>1584194870288</created>
@@ -325,11 +340,18 @@
       <option name="project" value="LOCAL" />
       <updated>1585810624726</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="라인플러스 2020상반기 공채 코딩테스트">
+      <created>1586064902201</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1586064902201</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48738000" />
+    <option name="totallyTimeSpent" value="53596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -342,19 +364,19 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Messages" order="0" sideWeight="0.4985694" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49427754" weight="0.24939759" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49642345" weight="0.23734939" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4899857" weight="0.17590362" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49284694" weight="0.3253012" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49427754" visible="true" weight="0.22891566" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49427754" weight="0.22891566" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49785408" weight="0.23614457" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50214595" side_tool="true" weight="0.23855421" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49713877" weight="0.28915662" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50143063" side_tool="true" visible="true" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -423,7 +445,8 @@
     <MESSAGE value="백준_14225(부분수열의 합) 성공&#10;브루트 포스, 재귀" />
     <MESSAGE value="백준_2109(순회강연) 성공&#10;Greedy, 우선순위 큐" />
     <MESSAGE value="백준_12886(돌 그룹) 성공&#10;BFS" />
-    <option name="LAST_COMMIT_MESSAGE" value="백준_12886(돌 그룹) 성공&#10;BFS" />
+    <MESSAGE value="라인플러스 2020상반기 공채 코딩테스트" />
+    <option name="LAST_COMMIT_MESSAGE" value="라인플러스 2020상반기 공채 코딩테스트" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/BOJ_9019.java">
@@ -589,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Line_2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Line_4.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -603,5 +619,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Line_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BOJ_2206.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Algorithm_2020</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
