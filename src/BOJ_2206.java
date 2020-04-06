@@ -32,17 +32,16 @@ public class BOJ_2206 {
 	static void bfs() {
 		Queue<Move> queue = new LinkedList<>();
 
-		boolean[][] checked = new boolean[1001][1001];
-		checked[1][1] = true;
+		boolean[][] isChecked = new boolean[1001][1001];
+		isChecked[1][1] = true;
 
-		queue.add(new Move(1,1,false, 1, checked));
+		queue.add(new Move(1,1,false, 1));
 		while(!queue.isEmpty()) {
 			Move move = queue.poll();
 			int x = move.x;
 			int y = move.y;
 			int cnt = move.cnt;
 			boolean isBombUsed = move.isBombUsed;
-			boolean[][] isChecked = move.isChecked;
 
 			if(x == N && y == M) {
 				minPath = Math.min(cnt, minPath);
@@ -55,12 +54,12 @@ public class BOJ_2206 {
 				if(nextX >= 1 && nextX <= N && nextY >= 1 && nextY <= M) {
 					if(map[nextX][nextY] && !isChecked[nextX][nextY]) {
 						isChecked[nextX][nextY] = true;
-						queue.add(new Move(nextX, nextY, isBombUsed, cnt+1, isChecked));
+						queue.add(new Move(nextX, nextY, isBombUsed, cnt+1));
 						isChecked[nextX][nextY] = false;
 					} else {
 						if(!isBombUsed && !isChecked[nextX][nextY]) {
 							isChecked[nextX][nextY] = true;
-							queue.add(new Move(nextX, nextY, true, cnt+1, isChecked));
+							queue.add(new Move(nextX, nextY, true, cnt+1));
 							isChecked[nextX][nextY] = false;
 						}
 					}
@@ -75,12 +74,10 @@ class Move {
 	int y;
 	boolean isBombUsed;
 	int cnt;
-	boolean[][] isChecked;
-	public Move(int x, int y, boolean isBombUsed, int cnt, boolean[][] isChecked) {
+	public Move(int x, int y, boolean isBombUsed, int cnt) {
 		this.x = x;
 		this.y = y;
 		this.isBombUsed = isBombUsed;
 		this.cnt = cnt;
-		this.isChecked = isChecked;
 	}
 }
