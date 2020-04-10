@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class BOJ_1865 {
+	static final int INF = 1000000000;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -33,28 +34,27 @@ public class BOJ_1865 {
 				wormHallEnds[i] = E;
 			}
 
-			int[] nodes;
+			int[] nodes = new int[N+1];
+			Arrays.fill(nodes, INF);
+			nodes[1] = 0;
 			boolean isNegative = false;
-			for(int w = 0; w < W; w++) {
 
-				nodes = new int[N+1];
-				Arrays.fill(nodes, Integer.MAX_VALUE);
-				nodes[wormHallEnds[w]] = 0;
-
-				// N-1 Edge Relaxation
-				outerloop:
-				for(int i = 1; i <= N; i++) {
-					for(Edge edge : edgeList) {
-						if(nodes[edge.start] != Integer.MAX_VALUE && nodes[edge.end] > nodes[edge.start] + edge.time) {
-							nodes[edge.end] = nodes[edge.start] + edge.time;
-							// Negative Cycle
-							if (i == N) {
-								isNegative = true;
-								break outerloop;
-							}
+			// N-1 Edge Relaxation
+			outerloop:
+			for(int i = 1; i <= N; i++) {
+				isNegative = false;
+				for(Edge edge : edgeList) {
+					if(nodes[edge.end] > nodes[edge.start] + edge.time) {
+						nodes[edge.end] = nodes[edge.start] + edge.time;
+						isNegative = true;
+						// Negative Cycle
+						if (i == N) {
+							isNegative = true;
+							break outerloop;
 						}
 					}
 				}
+				if(!isNegative) break;
 			}
 			sb.append((isNegative ? "YES" : "NO") + "\n");
 		}
