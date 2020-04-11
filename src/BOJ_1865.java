@@ -16,7 +16,6 @@ public class BOJ_1865 {
 			int W = Integer.parseInt(st.nextToken());
 
 			List<Edge> edgeList = new ArrayList<>();
-			int[] wormHallEnds = new int[W];
 			for (int i = 0; i < M; i++) {
 				st = new StringTokenizer(br.readLine());
 				int S = Integer.parseInt(st.nextToken());
@@ -31,32 +30,31 @@ public class BOJ_1865 {
 				int E = Integer.parseInt(st.nextToken());
 				int T = Integer.parseInt(st.nextToken());
 				edgeList.add(new Edge(S, E, (-1) * T));
-				wormHallEnds[i] = E;
 			}
 
 			int[] nodes = new int[N+1];
 			Arrays.fill(nodes, INF);
 			nodes[1] = 0;
-			boolean isNegative = false;
+			boolean isUpdated = false;
 
 			// N-1 Edge Relaxation
 			outerloop:
 			for(int i = 1; i <= N; i++) {
-				isNegative = false;
+				isUpdated = false;
 				for(Edge edge : edgeList) {
 					if(nodes[edge.end] > nodes[edge.start] + edge.time) {
 						nodes[edge.end] = nodes[edge.start] + edge.time;
-						isNegative = true;
+						isUpdated = true;
 						// Negative Cycle
 						if (i == N) {
-							isNegative = true;
+							isUpdated = true;
 							break outerloop;
 						}
 					}
 				}
-				if(!isNegative) break;
+				if(!isUpdated) break;
 			}
-			sb.append((isNegative ? "YES" : "NO") + "\n");
+			sb.append((isUpdated ? "YES" : "NO") + "\n");
 		}
 		System.out.println(sb);
 	}
