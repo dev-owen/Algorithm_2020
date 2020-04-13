@@ -5,7 +5,6 @@ import java.util.*;
 
 public class BOJ_11438 {
 	static List<Integer>[] list = new ArrayList[100001];
-	static boolean[] visited = new boolean[100001]; // 노드를 방문 했는지 여부
 	static int[] depth = new int[100001]; // 해당 노드의 깊이
 	static int[][] parent = new int[100001][21]; // k = parent[a][b] 인 경우 a의 2^b 번째 조상이 k이다.
 
@@ -23,16 +22,16 @@ public class BOJ_11438 {
 			if(list[firstNode] == null) {
 				list[firstNode] = new ArrayList<>();
 				depth[firstNode] = depth[secondNode]+1;
+				parent[firstNode][0] = secondNode;
+				list[secondNode].add(firstNode);
 			}
 			else if(list[secondNode] == null) {
 				list[secondNode] = new ArrayList<>();
 				depth[secondNode] = depth[firstNode]+1;
+				parent[secondNode][0] = firstNode;
+				list[firstNode].add(secondNode);
 			}
-			list[firstNode].add(secondNode);
-			list[secondNode].add(firstNode);
 		}
-
-		bfs(); // parent[][0] 채운다.
 
 		for(int i = 1; i <= 20; i++) { // 나머지 parent 채운다.
 			for(int j = 1; j <= N; j++) {
@@ -51,33 +50,6 @@ public class BOJ_11438 {
 		System.out.println(sb);
 	}
 
-	static void bfs() {
-		Queue<Integer> queue = new LinkedList<>();
-		queue.add(1);
-		visited[1] = true;
-		int d = 0;
-
-		while(!queue.isEmpty()) {
-			d++;
-			int queueSize = queue.size();
-			for(int i = 0; i < queueSize; i++) {
-				int now = queue.poll();
-				if(list[now] == null) continue;
-
-				int listSize = list[now].size();
-				for(int j = 0; j < listSize; j++) {
-					int next = list[now].get(j);
-
-					if(!visited[next]) {
-						parent[next][0] = now;
-						queue.add(next);
-						visited[next] = true;
-						depth[next] = d;
-					}
-				}
-			}
-		}
-	}
 
 	static int lca(int first, int second) {
 		int low, high;
