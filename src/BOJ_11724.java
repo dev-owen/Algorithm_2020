@@ -27,7 +27,7 @@ public class BOJ_11724 {
 			list.get(second).add(first);
 		}
 		int idx = 0;
-		Queue<Integer> queue = new LinkedList<>();
+		Queue<Integer> queue;
 		for(int i = 1; i <= N; i++) {
 			if(!checked[i]) {
 				queue = new LinkedList<>();
