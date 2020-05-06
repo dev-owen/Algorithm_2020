@@ -19,9 +19,7 @@ public class BOJ_9202 {
 				return null;
 			}
 
-			if (child[c - 'A'] == null) {
-				child[c - 'A'] = new Node(c);
-			}
+			if (child[c - 'A'] == null) child[c - 'A'] = new Node(c);
 			return child[c - 'A'];
 		}
 	}
@@ -35,6 +33,7 @@ public class BOJ_9202 {
 
 		void add(String s) {
 			Node n = this.n;
+
 			for (int i = 0; i < s.length(); i++) {
 				n = n.setChild(s.charAt(i));
 			}
@@ -43,6 +42,7 @@ public class BOJ_9202 {
 
 		boolean isContain(int length) {
 			Node n = this.n;
+
 			for (int i = 0; i < length; i++) {
 				if (n.child[string[i] - 'A'] == null) {
 					return false;
@@ -70,7 +70,6 @@ public class BOJ_9202 {
 		for (int i = 0; i < N; i++) {
 			trie.add(br.readLine());
 		}
-
 		br.readLine();
 		N = Integer.parseInt(br.readLine());
 
@@ -82,13 +81,8 @@ public class BOJ_9202 {
 				}
 			}
 			hs.clear();
-
 			search();
-
-			if (i != N - 1) {
-				br.readLine();
-			}
-
+			if (i != N - 1) br.readLine();
 			result();
 		}
 		System.out.println(sb.toString());
@@ -103,6 +97,7 @@ public class BOJ_9202 {
 	private static void isPossible(int length) {
 		size = length;
 		string = new char[size];
+
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++) {
 				string[0] = cube[i][j];
@@ -115,16 +110,13 @@ public class BOJ_9202 {
 
 	private static void dfs(int x, int y, int depth) {
 		if (depth == size) {
-			if (trie.isContain(depth) && !hs.contains(String.copyValueOf(string))) {
-				hs.add(String.copyValueOf(string));
-			}
+			if (trie.isContain(depth) && !hs.contains(String.copyValueOf(string))) hs.add(String.copyValueOf(string));
 			return;
 		}
 
 		for (int i = 0; i < 8; i++) {
 			int nx = x + dx[i];
 			int ny = y + dy[i];
-
 			if (nx >= 0 && ny >= 0 && nx < 4 && ny < 4 && !visit[nx][ny]) {
 				string[depth] = cube[nx][ny];
 				visit[nx][ny] = true;
@@ -137,14 +129,11 @@ public class BOJ_9202 {
 	private static void result() {
 		ArrayList<String> list = new ArrayList<>(hs);
 		Collections.sort(list);
-
 		int point = 0, count = 0;
 		String result = "";
 
 		for (String s : list) {
-			if (s.length() > result.length()) {
-				result = s;
-			}
+			if (s.length() > result.length()) result = s;
 			point += calc(s);
 			count++;
 		}
@@ -152,17 +141,11 @@ public class BOJ_9202 {
 	}
 
 	private static int calc(String s) {
-		if (s.length() <= 2) {
-			return 0;
-		} else if (s.length() == 3) {
-			return 1;
-		} else if (s.length() <= 6) {
-			return s.length() - 3;
-		} else if (s.length() == 7) {
-			return 5;
-		} else if (s.length() == 8) {
-			return 11;
-		}
+		if (s.length() <= 2) return 0;
+		else if (s.length() == 3) return 1;
+		else if (s.length() <= 6) return s.length() - 3;
+		else if (s.length() == 7) return 5;
+		else if (s.length() == 8) return 11;
 		return -1;
 	}
 }
