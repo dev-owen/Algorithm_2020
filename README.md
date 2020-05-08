@@ -61,7 +61,9 @@
 - **백준 1655 / 가운데를 말해요 / 2020.04.07**
     - MaxHeap, MinHeap을 이용해서
 - 백준 7785 / 회사에 있는 사람 / 2020.04.21
-    - HashSet, List 사용 
+    - HashSet, List 사용
+- 카카오 19인턴 2번 / 튜플 / 2020.05.08
+    - PriorityQueue, Comparator, 정규표현식 처리
 
 ### 문자열 알고리즘
 - 백준 1701 / Cubeditor / 2020.03.26
