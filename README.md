@@ -67,6 +67,8 @@
     - HashSet, List 사용
 - 카카오 19인턴 2번 / 튜플 / 2020.05.08
     - PriorityQueue, Comparator, 정규표현식 처리
+- 카카오 19인턴 4번 / 호텔 방 배정 / 2020.05.08
+    - Union-find
 
 ### 문자열 알고리즘
 - 백준 1701 / Cubeditor / 2020.03.26
