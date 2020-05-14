@@ -49,8 +49,8 @@ public class BOJ_1707 {
 	static void DFS(int node, int color) {
 		nodes[node] = color;
 
-		for (int i = 1; i <= V; i++) {
-			if (graph[node].contains(i) && nodes[i] == 0) DFS(i, 3 - color);
+		for (int i = 0; i < graph[node].size() ; i++) {
+			if (nodes[graph[node].get(i)] == 0) DFS(graph[node].get(i), 3 - color);
 		}
 	}
 }
