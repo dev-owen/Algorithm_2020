@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
 
 public class BOJ_1202 {
@@ -9,54 +7,44 @@ public class BOJ_1202 {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
-		// 보석은 비싼 가격부터 담고(같은 가격이면 가벼운 보석), 가방은 작은 크기부터 채운다.
-		PriorityQueue<Jewelry> pq = new PriorityQueue<>();
+		Jewelry[] jewArr = new Jewelry[N];
 		int[] bagArr = new int[K];
-		boolean[] bagUsed = new boolean[K];
-		for(int i = 0; i < N; i++) {
+		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
-			int jewelryWeight = Integer.parseInt(st.nextToken());
-			int jewelryPrice = Integer.parseInt(st.nextToken());
-			pq.add(new Jewelry(jewelryWeight, jewelryPrice));
+			jewArr[i] = new Jewelry(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
 		}
-		for(int i = 0; i < K; i++) {
-			st = new StringTokenizer(br.readLine());
-			bagArr[i] = Integer.parseInt(st.nextToken());
-
+		for (int i = 0; i < K; i++) {
+			bagArr[i] = Integer.parseInt(br.readLine());
 		}
-		Arrays.sort(bagArr); // bagList 무게 오름차순 정렬
+		Arrays.sort(jewArr); // jewArr 무게 오름차순 정렬
+		Arrays.sort(bagArr); // bagArr 무게 오름차순 정렬
 
+		PriorityQueue<Integer> pq = new PriorityQueue<>((x, y) -> Integer.compare(y, x));
 		long priceSum = 0L;
-		while(!pq.isEmpty()) {
-			Jewelry jewelry = pq.poll();
-			int price = jewelry.price;
-			int weight = jewelry.weight;
-			for(int i = 0; i < bagArr.length; i++) {
-				if(weight <= bagArr[i] && !bagUsed[i]) {
-					bagUsed[i] = true;
-					priceSum += price;
-					break;
-				}
+		int idx = 0;
+		for (int i = 0; i < K; i++) {
+			while (idx < N && jewArr[idx].weight <= bagArr[i]) {
+				pq.add(jewArr[idx].price);
+				idx++;
 			}
+			if (!pq.isEmpty()) priceSum += pq.poll();
 		}
 		System.out.println(priceSum);
 	}
+
+	static class Jewelry implements Comparable<Jewelry> {
+		int weight;
+		int price;
+
+		private Jewelry(int weight, int price) {
+			this.weight = weight;
+			this.price = price;
+		}
+
+		@Override
+		public int compareTo(Jewelry o) {
+			return this.weight - o.weight;
+		}
+	}
 }
 
-class Jewelry implements Comparable<Jewelry>{
-	int weight;
-	int price;
-	public Jewelry(int weight, int price) {
-		this.weight = weight;
-		this.price = price;
-	}
-	// 가격이 비쌀 수록, 같은 가격에서는 무게가 가벼울 수록
-	@Override
-	public int compareTo(Jewelry o) {
-		if(o.price > this.price) return 1;
-		else if(o.price == this.price) {
-			if(o.weight < this.weight) return 1;
-			else return -1;
-		} else return -1;
-	}
-}
