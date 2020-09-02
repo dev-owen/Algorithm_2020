@@ -1,83 +1,82 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.StringTokenizer;
 
 public class BOJ_2206 {
-	static int N, M, minPath = Integer.MAX_VALUE;
-	static int[] dx = {1, 0, -1, 0};
-	static int[] dy = {0, 1, 0, -1};
-	static boolean[][] map = new boolean[1001][1001];
+    static int N, M;
+    static int[] dx = {0, 0, -1, 1}, dy = {-1, 1, 0, 0};
+    static int[][] map;
+    static boolean[][][] visited;
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		M = Integer.parseInt(st.nextToken());
-		N = Integer.parseInt(st.nextToken());
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] input = br.readLine().split(" ");
 
-		for(int i = 1; i <= M; i++) {
-			char[] charArr = br.readLine().toCharArray();
-			for(int j = 1; j <= N; j++) {
-				map[j][i] = charArr[j-1] - '0' == 0 ? true : false;
-			}
-		}
+        N = Integer.parseInt(input[0]);
+        M = Integer.parseInt(input[1]);
 
-		bfs();
+        map = new int[N + 1][M + 1];
+        visited = new boolean[N + 1][M + 1][2];
 
-		System.out.println(minPath != Integer.MAX_VALUE ? minPath : "-1");
-	}
+        for (int i = 1; i <= N; i++) {
+            input = br.readLine().split("");
+            for (int j = 1; j <= M; j++) {
+                map[i][j] = Integer.parseInt(input[j - 1]);
+            }
+        }
 
-	static void bfs() {
-		Queue<Move> queue = new LinkedList<>();
+        bfs(1, 1);
+    }
 
-		boolean[][] isChecked = new boolean[1001][1001];
-		isChecked[1][1] = true;
+    static void bfs(int x, int y) {
+        Queue<Point> q = new LinkedList<>();
+        q.add(new Point(x, y, 0, 1));
 
-		queue.add(new Move(1,1,false, 1));
-		while(!queue.isEmpty()) {
-			Move move = queue.poll();
-			int x = move.x;
-			int y = move.y;
-			int cnt = move.cnt;
-			boolean isBombUsed = move.isBombUsed;
+        visited[x][y][0] = true;
+        visited[x][y][1] = true;
 
-			if(x == N && y == M) {
-				minPath = Math.min(cnt, minPath);
-				return;
-			}
+        while (!q.isEmpty()) {
+            Point p = q.poll();
 
-			for(int i = 0; i < 4; i++) {
-				int nextX = x + dx[i];
-				int nextY = y + dy[i];
-				if(nextX >= 1 && nextX <= N && nextY >= 1 && nextY <= M) {
-					if(map[nextX][nextY] && !isChecked[nextX][nextY]) {
-						isChecked[nextX][nextY] = true;
-						queue.add(new Move(nextX, nextY, isBombUsed, cnt+1));
-						isChecked[nextX][nextY] = false;
-					} else {
-						if(!isBombUsed && !isChecked[nextX][nextY]) {
-							isChecked[nextX][nextY] = true;
-							queue.add(new Move(nextX, nextY, true, cnt+1));
-							isChecked[nextX][nextY] = false;
-						}
-					}
-				}
-			}
-		}
-	}
-}
+            if (p.x == N && p.y == M) {
+                System.out.println(p.count);
+                return;
+            }
 
-class Move {
-	int x;
-	int y;
-	boolean isBombUsed;
-	int cnt;
-	public Move(int x, int y, boolean isBombUsed, int cnt) {
-		this.x = x;
-		this.y = y;
-		this.isBombUsed = isBombUsed;
-		this.cnt = cnt;
-	}
+            for (int i = 0; i < 4; i++) {
+                int nx = p.x + dx[i];
+                int ny = p.y + dy[i];
+                int breakWall = p.breakWall;
+                int count = p.count;
+
+                if (nx <= 0 || ny <= 0 || nx > N || ny > M) continue;
+
+                if (map[nx][ny] == 1) { // 벽을 만났을
+                    if (breakWall == 0 && !visited[nx][ny][1]) { // 벽을 한 번도 부신 적이 없음
+                        visited[nx][ny][1] = true;
+                        q.add(new Point(nx, ny, 1, count + 1));
+                    }
+                } else {
+                    if (!visited[nx][ny][breakWall]) {
+                        q.add(new Point(nx, ny, breakWall, count + 1));
+                        visited[nx][ny][breakWall] = true;
+                    }
+                }
+            }
+        }
+
+        System.out.println(-1);
+    }
+
+    private static class Point {
+        int x, y, breakWall, count;
+
+        public Point(int x, int y, int breakWall, int count) {
+            this.x = x;
+            this.y = y;
+            this.breakWall = breakWall;
+            this.count = count;
+        }
+    }
 }
