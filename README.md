@@ -150,3 +150,5 @@
 - Allocation / AC / 2020.10.04
 - Plates / AC / 2020.10.04
     - DP
+- Workout / AC / 2020.10.04
+    - Binary Search
