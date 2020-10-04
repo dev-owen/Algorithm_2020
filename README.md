@@ -142,3 +142,9 @@
     - 재귀 호출
 - 백준 11559 / Puyo Puyo / 2020.05.14
     - BFS
+    
+    
+## Google KickStart
+### 2020
+#### Round A
+- Allocation / AC / 2020.10.04
