@@ -148,3 +148,5 @@
 ### 2020
 #### Round A
 - Allocation / AC / 2020.10.04
+- Plates / AC / 2020.10.04
+    - DP
